@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(gradient-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.front{
+    background-color: transparent;
+    font-size: x-large;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.25);
+
+}
+
+.front:hover{
+    outline: 1px solid rgb(195, 195, 175);
+   transform: scale(1.2);
+   transition: all 1s linear ;
+}
+
+.front.active{
+    display: none;
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(gradient-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    /* display: grid; */
+    place-items: center;
+    display: none;
+} 
+ .wrapper.active{
+    display: grid;
+ }
+.game-info{
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+    
+}
+
+.tic-tac-toe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3, .box6{
+    border-bottom: 2px solid white;
+}
+.box8, .box7{
+    border-right: 2px solid white;
+}
+
+.btn{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    position:absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 2rem;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0,255,0,0.3); 
+}
+
